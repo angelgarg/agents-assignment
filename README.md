@@ -71,11 +71,6 @@ Any meaningful sentence spoken while the agent is talking interrupts and is proc
 - No SDK or kernel-level modifications
 - Pure transcript-level filtering
 
-### How to Run
-```bash
-python examples/voice_agents/basic_agent.py console
-
-
 ## Evidence – Agent Interruption Handling
 
 The following screenshot demonstrates the required behavior:
@@ -85,8 +80,13 @@ The following screenshot demonstrates the required behavior:
 
 ![Interruption handling evidence](https://github.com/angelgarg/agents-assignment/blob/main/interrupt_test.png)
 
+### How to Run
+```bash
+python examples/voice_agents/basic_agent.py console
 
-## Features
+
+
+### Features
 
 - **Flexible integrations**: A comprehensive ecosystem to mix and match the right STT, LLM, TTS, and Realtime API to suit your use case.
 - **Integrated job scheduling**: Built-in task scheduling and distribution with [dispatch APIs](https://docs.livekit.io/agents/build/dispatch/) to connect end users to agents.
