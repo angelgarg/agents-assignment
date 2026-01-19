@@ -30,6 +30,62 @@ agents that can see, hear, and understand.
 
 <!--END_DESCRIPTION-->
 
+---
+
+## Assignment Submission – Angel Garg
+
+This repository contains my submission for the LiveKit Voice Agent assignment.
+
+### Objective
+Implement transcript-level interruption handling such that:
+- Passive acknowledgements do **not** interrupt the agent
+- Explicit interruption commands **do** interrupt the agent
+
+### Implemented Behavior
+
+#### Ignored While Agent Is Speaking
+The following words are treated as passive acknowledgements and are ignored:
+- "yeah"
+- "ok"
+- "okay"
+- "hmm"
+
+Example:
+- User says **"Yeah."** → agent continues speaking uninterrupted
+
+#### Immediate Interruptions
+The following commands immediately interrupt the agent:
+- "stop"
+- "wait"
+- "hold on"
+
+Example:
+- User says **"Stop."** → agent speech stops immediately
+
+#### Semantic Interruptions
+Any meaningful sentence spoken while the agent is talking interrupts and is processed normally.
+
+### Technical Approach
+- Logic implemented inside `on_message()` in `basic_agent.py`
+- No changes made to VAD internals
+- No SDK or kernel-level modifications
+- Pure transcript-level filtering
+
+### How to Run
+```bash
+python examples/voice_agents/basic_agent.py console
+
+
+## Evidence – Agent Interruption Handling
+
+The following screenshot demonstrates the required behavior:
+
+- Passive acknowledgement **"Yeah."** is ignored while the agent is speaking  
+- Explicit command **"Stop."** immediately interrupts the agent
+
+![Interruption handling evidence](interrupt_test.png)
+
+
 ## Features
 
 - **Flexible integrations**: A comprehensive ecosystem to mix and match the right STT, LLM, TTS, and Realtime API to suit your use case.
