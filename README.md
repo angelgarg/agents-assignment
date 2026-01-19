@@ -83,7 +83,7 @@ The following screenshot demonstrates the required behavior:
 - Passive acknowledgement **"Yeah."** is ignored while the agent is speaking  
 - Explicit command **"Stop."** immediately interrupts the agent
 
-![Interruption handling evidence](interrupt_test.png)
+![Interruption handling evidence](https://github.com/angelgarg/agents-assignment/blob/main/interrupt_test.png)
 
 
 ## Features
